@@ -1,56 +1,79 @@
 
 #DEBUG
-2
 0
-1.0
+0
+10.0
 F
 
 #RESTART
 F
 
 #GRID
-2
-2
--91.0
-91.0
-322.5
+8		lons
+4		lats
+-90.0
+90.0
+0.0
+
+#DIFFUSION
+T
+8.0e4
+
+#THERMALDIFFUSION
+5.6e-4
+0.5
+
+#CPUTIMEMAX
+86000.0
 
 #TIMESTART
 2002
-04
-15
-01
+03
+18
+00
 00
 00
 
 #TIMEEND
 2002
-04
-15
-04
+03
+19
+00
 00
 00
 
-#SAVEPLOTS
-900.0
-2
-3DALL
-60.0
-1DALL
-60.0
+#CFL
+0.75
 
-SATELLITES
-1
-sat_1.dat
+#LIMITER
+mc
+
+#STATISTICALMODELSONLY
+F
+1800.0
+
+#LOGFILE
 10.0
 
+#SAVEPLOTS
+7200.0
+2
+3DALL
+7200.0
+3DSRC
+7200.0
+
+#ELECTRODYNAMICS
+60.0
+60.0
+
 #ALTITUDE
-95.0
-750.0
-F
+100.0
+600.0
+T
 
 #INITIAL
-F		MSIS
+T		MSIS
 T		IRI
 200.0
 1000.0
@@ -66,24 +89,24 @@ none
 none
 
 #F107
-210.0
-210.0
+150.0
+150.0
 
 #HPI
-10.0
+1.0
 
 #KP
-2.0
+1.0
 
 #SOLARWIND
 0.0
 0.0
--2.0
+2.0
 400.0
 
 #THERMO
 T		 UseSolarHeating
-F		 UseJouleHeating
+T		 UseJouleHeating
 T		 UseAuroralHeating
 T		 UseNOCooling
 T		 UseOCooling
@@ -91,8 +114,9 @@ T		 UseConduction
 
 #FORCING
 T		UsePressureGradient
-F		UseIonDrag
-F		UseViscosity
+T		UseIonDrag
+T		UseNeutralDrag
+T		UseViscosity
 T		UseCoriolis
 T		UseGravity
 
@@ -110,7 +134,5 @@ T		UseNeutralChemistry
 
 NGDC_INDICES
 AMIE-19980321.dat
-
-
 
 #END
