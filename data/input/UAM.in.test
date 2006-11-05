@@ -1,9 +1,9 @@
 
 #DEBUG
-0
-0
-10.0
-F
+0		debug level
+0		cpu to watch
+10.0		dt between normal code output to stdout
+F		usebarriers - forces the code to stop and wait more often
 
 #RESTART
 F
@@ -17,11 +17,12 @@ F
 
 #DIFFUSION
 T
-100.0
+100.0		Eddy Diffusion Coefficient (Should be about 37.5 for 1-D runs)
+0.010		Total Eddy Diffusion applied at alts below this pressures level
+0.005		No Eddy Diffusion at altitudes above this pressure level
 
 #THERMALDIFFUSION
-5.6e-4
-0.5
+5.6e-4		Thermal conductivity (code use kappa = number * T**0.75)
 
 #CPUTIMEMAX
 86000.0

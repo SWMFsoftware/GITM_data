@@ -1,9 +1,9 @@
 
 #DEBUG
-0
-0
-10.0
-F
+0		debug level
+0		cpu to watch
+10.0		dt between normal code output to stdout
+F		usebarriers - forces the code to stop and wait more often
 
 #RESTART
 F
@@ -11,96 +11,97 @@ F
 #GRID
 2		lons
 2		lats
--90.0
-90.0
-0.0
+-90.0		minimum latitude to model
+90.0		maximum latitude to model
+0.0		longitude to model (ignored in everything but 1D)
 
 #DIFFUSION
 T
-100.0
+100.0		Eddy Diffusion Coefficient (Should be about 37.5 for 1-D runs)
+0.010		Total Eddy Diffusion applied at alts below this pressures level
+0.005		No Eddy Diffusion at altitudes above this pressure level
 
 #THERMALDIFFUSION
-5.6e-4
-0.5
+5.6e-4		Thermal conductivity (code use kappa = number * T**0.75)
 
 #CPUTIMEMAX
-86000.0
+86000.0		Maximum amount of cputime to use before stopping the code
 
 #TIMESTART
-2002
-12
-21
-00
-00
-00
+2002		year
+12		month
+21		day
+00		hour
+00		minute
+00		second
 
 #TIMEEND
-2002
-12
-21
-00
-05
-00
+2002		year
+12		month
+21		day
+00		hour
+05		minute
+00		second
 
 #CFL
-0.75
+0.75		percentage of maximum allowable time-step to take
 
 #LIMITER
-mc
+mc		only limiter available
 
 #STATISTICALMODELSONLY
-F
-1800.0
+F		if you want to run with msis and iri only (i.e. not GITM)
+1800.0		time step to take if you run with msis and iri
 
 #LOGFILE
-1.0
+1.0		dt for output to a log file
 
 #SAVEPLOTS
-7200.0
-1
-3DALL
-300.0
+7200.0		dt for writing restart files
+1		how many output files do you want
+3DALL		output style
+300.0		dt for output
 
 #ELECTRODYNAMICS
-60.0
-60.0
+60.0		how often to update potential
+60.0		how often to update aurora and euv
 
 #ALTITUDE
-100.0
-600.0
-T
+100.0		minimum altitude to use
+600.0		maximum altitude to use (ignored unless the following is F)
+T		use stretched grid
 
 #INITIAL
-T		MSIS
-T		IRI
-100.0
-1000.0
-5.0e17
-7.0e18
-3.0e19
+T		initialize thermosphere using MSIS
+T		initialize ionosphere using IRI
+100.0		if msis is false, then this is the temperature at the base
+1000.0		if msis is false, then this is the temperature at the top
+5.0e17		if msis is false, then this is the N(species1) at the base
+7.0e18		if msis is false, then this is the N(species2) at the base
+3.0e19		if msis is false, then this is the N(species3) at the base
 
 #APEX
-T
+T		Use apex magnetic coordinate system
 
 #AMIEFILES
-none
-none
+none		northern hemisphere amie file
+none		southern hemisphere amie file
 
 #F107
-150.0
-150.0
+150.0		f10.7
+150.0		f10.7 averaged over 81 days
 
 #HPI
-1.0
+1.0		hemispheric power
 
 #KP
-1.0
+1.0		kp
 
 #SOLARWIND
-0.0
-0.0
--20.0
-400.0
+0.0		IMF Bx
+0.0		IMF By
+-20.0		IMF Bz
+400.0		Solar wind Vx
 
 #THERMO
 T		 UseSolarHeating
