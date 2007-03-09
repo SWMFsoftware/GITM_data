@@ -1,0 +1,57 @@
+ Setting potential to Weimer [1996].
+ > Reading Inputs
+Writing Output files at iStep :       1 2002 12 21  0  0  0
+ > Starting Main Time Loop
+ Setting potential to Weimer [1996].
+iStep      5, Time : 000012, RealTime :       0.53 min
+iStep      8, Time : 000021, RealTime :       0.60 min
+iStep     11, Time : 000030, RealTime :       0.66 min
+iStep     15, Time : 000041, RealTime :       0.74 min
+iStep     19, Time : 000052, RealTime :       0.82 min
+iStep     22, Time : 000100, RealTime :       0.88 min
+iStep     26, Time : 000111, RealTime :       0.97 min
+iStep     30, Time : 000122, RealTime :       1.05 min
+iStep     33, Time : 000130, RealTime :       1.11 min
+iStep     37, Time : 000141, RealTime :       1.19 min
+iStep     41, Time : 000151, RealTime :       1.28 min
+iStep     45, Time : 000202, RealTime :       1.36 min
+iStep     48, Time : 000210, RealTime :       1.43 min
+iStep     52, Time : 000220, RealTime :       1.51 min
+iStep     56, Time : 000231, RealTime :       1.59 min
+iStep     60, Time : 000241, RealTime :       1.67 min
+iStep     64, Time : 000252, RealTime :       1.75 min
+iStep     67, Time : 000300, RealTime :       1.81 min
+iStep     71, Time : 000310, RealTime :       1.90 min
+iStep     75, Time : 000320, RealTime :       1.98 min
+iStep     79, Time : 000331, RealTime :       2.06 min
+iStep     83, Time : 000341, RealTime :       2.14 min
+iStep     87, Time : 000352, RealTime :       2.22 min
+iStep     90, Time : 000400, RealTime :       2.28 min
+iStep     94, Time : 000410, RealTime :       2.38 min
+iStep     98, Time : 000421, RealTime :       2.46 min
+iStep    102, Time : 000431, RealTime :       2.54 min
+iStep    106, Time : 000442, RealTime :       2.62 min
+iStep    110, Time : 000452, RealTime :       2.70 min
+iStep    113, Time : 000500, RealTime :       2.76 min
+Writing Output files at iStep :     113 2002 12 21  0  5  0
+Writing Output files at iStep :     113 2002 12 21  0  5  0
+-> GITM                      took   177.0 seconds to complete
+--> initialize               took    20.6 seconds to complete
+---> init_b0                 took    15.3 seconds to complete
+----> Message Pass           took    29.7 seconds to complete
+--> calc_electrodyn          took    13.8 seconds to complete
+----> calc_rates             took    20.1 seconds to complete
+----> chapman_integrals      took     0.1 seconds to complete
+---> calc_efield             took     0.6 seconds to complete
+--> advance                  took   126.0 seconds to complete
+---> euv_ionization_heat     took     0.4 seconds to complete
+---> conduction              took     0.2 seconds to complete
+---> Get AMIE Potential      took     2.5 seconds to complete
+----> setgrid                took     0.0 seconds to complete
+----> getpotential           took     2.4 seconds to complete
+-----> weimer                took     1.9 seconds to complete
+---> Aurora                  took     0.8 seconds to complete
+---> Ion Forcing             took     1.6 seconds to complete
+---> calc_chemistry          took    37.8 seconds to complete
+---> horizontal_all          took    34.3 seconds to complete
+---> vertical_all            took    13.4 seconds to complete
