@@ -44,7 +44,7 @@ T
 00		second
 
 #CFL
-0.75		percentage of maximum allowable time-step to take
+0.25		percentage of maximum allowable time-step to take
 
 #LIMITER
 mc		only limiter available
@@ -72,7 +72,7 @@ F		if you want to run with msis and iri only (i.e. not GITM)
 F		use stretched grid
 
 #INITIAL
-F		initialize thermosphere using MSIS
+T		initialize thermosphere using MSIS
 F		initialize ionosphere using IRI
 100.0		if msis is false, then this is the temperature at the base
 250.0		if msis is false, then this is the temperature at the top
@@ -86,6 +86,7 @@ F		initialize ionosphere using IRI
 #VERTICALSOURCES
 T
 T
+10.0
 
 #APEX
 F		Use apex magnetic coordinate system
