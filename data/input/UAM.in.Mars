@@ -40,8 +40,8 @@ T
 12		month
 21		day
 00		hour
-00		minute
-20		second
+01		minute
+00		second
 
 #CFL
 0.75		percentage of maximum allowable time-step to take
@@ -76,10 +76,16 @@ F		initialize thermosphere using MSIS
 F		initialize ionosphere using IRI
 100.0		if msis is false, then this is the temperature at the base
 250.0		if msis is false, then this is the temperature at the top
+140.0		if msis is false, then this altitude of the temperature change
+20.0		if msis is false, then this width of the temperature change
 1.17e18		CO2
 4.03e15		CO
 2.31e15		O
 3.26e16		N2
+
+#VERTICALSOURCES
+T
+T
 
 #APEX
 F		Use apex magnetic coordinate system
