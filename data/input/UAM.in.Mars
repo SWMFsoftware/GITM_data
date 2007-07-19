@@ -44,7 +44,7 @@ T
 00		second
 
 #CFL
-0.25		percentage of maximum allowable time-step to take
+0.1		percentage of maximum allowable time-step to take
 
 #LIMITER
 mc		only limiter available
