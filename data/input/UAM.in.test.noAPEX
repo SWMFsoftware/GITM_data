@@ -120,6 +120,13 @@ T		UseViscosity
 T		UseCoriolis
 T		UseGravity
 
+#IONFORCING
+T
+T
+T
+T
+F
+
 #CHEMISTRY
 T		UseIonChemistry
 T		UseIonAdvection
