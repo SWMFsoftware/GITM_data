@@ -127,6 +127,13 @@ T		UseViscosity
 T		UseCoriolis
 T		UseGravity
 
+#IONFORCING
+T               UseExB
+T               UseIonPressure
+T               UseGravity
+T               UseNeutralDrag
+F		UseDynamo
+
 #CHEMISTRY
 T		UseIonChemistry
 T		UseIonAdvection
