@@ -91,6 +91,10 @@ none		southern hemisphere amie file
 150.0		f10.7
 150.0		f10.7 averaged over 81 days
 
+#EUV_DATA
+F		Use solar flux data
+fismflux.dat	Filename
+
 #HPI
 1.0		hemispheric power
 
@@ -128,5 +132,9 @@ T		UseNeutralChemistry
 65.0		! location of minimum grid spacing
 0.0		! Amount of stretch 0 (none) to 1 (lots)
 1.0		! More control of stretch ( > 1 stretch less < 1 stretch more)
+
+#GLOW
+F		Whether to couple to GLOW
+3600.0		How often to run glow
 
 #END
