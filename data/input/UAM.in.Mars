@@ -67,7 +67,7 @@ F		if you want to run with msis and iri only (i.e. not GITM)
 60.0		how often to update aurora and euv
 
 #ALTITUDE
-100.0		minimum altitude to use
+000.0		minimum altitude to use
 300.0		maximum altitude to use (ignored unless the following is F)
 F		use stretched grid
 
@@ -84,9 +84,9 @@ F		initialize ionosphere using IRI
 3.26e16		N2
 
 #VERTICALSOURCES
-T
-T
-10.0
+T              Use Eddy In Solver
+T              Use Neutral Friction In Solver
+10.0           Max Velocities
 
 #APEX
 F		Use apex magnetic coordinate system
@@ -118,6 +118,9 @@ T		 UseAuroralHeating
 T		 UseNOCooling
 T		 UseOCooling
 T		 UseConduction
+T		 UseTurbulentConduction
+T		 UseUpdatedTurbulentConduction
+20.0		 Eddy Conduction Scaling (>= 2.0 at Earth)
 
 #FORCING
 T		UsePressureGradient
@@ -135,9 +138,9 @@ T               UseNeutralDrag
 F		UseDynamo
 
 #CHEMISTRY
-T		UseIonChemistry
-T		UseIonAdvection
-T		UseNeutralChemistry
+F		UseIonChemistry
+F		UseIonAdvection
+F		UseNeutralChemistry
 
 #STRETCH
 65.0		! location of minimum grid spacing

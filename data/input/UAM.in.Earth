@@ -38,7 +38,7 @@ T
 #TIMEEND
 2002		year
 12		month
-21		day
+22		day
 00		hour
 05		minute
 00		second
@@ -57,10 +57,10 @@ F		if you want to run with msis and iri only (i.e. not GITM)
 1.0		dt for output to a log file
 
 #SAVEPLOTS
-7200.0		dt for writing restart files
+3600.0		dt for writing restart files
 1		how many output files do you want
 3DALL		output style
-300.0		dt for output
+3600.0		dt for output
 
 #ELECTRODYNAMICS
 60.0		how often to update potential
@@ -114,6 +114,9 @@ T		 UseAuroralHeating
 T		 UseNOCooling
 T		 UseOCooling
 T		 UseConduction
+T		 UseTurbulentConduction
+T		 UseUpdatedTurbulentConduction
+1.0		 Eddy Scaling
 
 #FORCING
 T		UsePressureGradient
