@@ -130,6 +130,10 @@ T		UseViscosity
 T		UseCoriolis
 T		UseGravity
 
+#WAVEDRAG
+T		UseEddyViscosity
+T		UseVerticalViscosity
+
 #IONFORCING
 T               UseExB
 T               UseIonPressure
@@ -138,9 +142,9 @@ T               UseNeutralDrag
 F		UseDynamo
 
 #CHEMISTRY
-F		UseIonChemistry
-F		UseIonAdvection
-F		UseNeutralChemistry
+T		UseIonChemistry
+T		UseIonAdvection
+T		UseNeutralChemistry
 
 #STRETCH
 65.0		! location of minimum grid spacing
