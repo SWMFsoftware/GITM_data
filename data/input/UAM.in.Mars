@@ -133,6 +133,7 @@ T		UseGravity
 #WAVEDRAG
 T		UseEddyViscosity
 T		UseVerticalViscosity
+T		UseStressHeating
 
 #IONFORCING
 T               UseExB

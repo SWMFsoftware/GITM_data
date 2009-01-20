@@ -129,13 +129,14 @@ T		UseGravity
 #WAVEDRAG
 T		UseEddyViscosity
 T		UseVerticalViscosity
+T		UseStressHeating
 
 #IONFORCING
 T               UseExB
 T               UseIonPressure
 T               UseGravity
 T               UseNeutralDrag
-T		UseDynamo
+F		UseDynamo
 
 #CHEMISTRY
 T		UseIonChemistry
