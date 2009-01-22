@@ -135,6 +135,12 @@ T		UseEddyViscosity
 T		UseVerticalViscosity
 T		UseStressHeating
 
+#VERTICALSOURCES
+F               UseNeutralFrictionInSolver
+F               UseBoquehoAndBlelly Eddy Velocities
+T               UseEddyCorrection 
+10.0            Maximum Vertical Velocities
+
 #IONFORCING
 T               UseExB
 T               UseIonPressure
