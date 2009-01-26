@@ -83,11 +83,6 @@ F		initialize ionosphere using IRI
 2.31e15		O
 3.26e16		N2
 
-#VERTICALSOURCES
-T              Use Eddy In Solver
-T              Use Neutral Friction In Solver
-10.0           Max Velocities
-
 #APEX
 F		Use apex magnetic coordinate system
 
