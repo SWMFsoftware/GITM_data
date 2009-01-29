@@ -40,7 +40,7 @@ T
 12		month
 21		day
 00		hour
-01		minute
+05		minute
 00		second
 
 #CFL
@@ -108,18 +108,18 @@ none		southern hemisphere amie file
 
 #THERMO
 T		 UseSolarHeating
-T		 UseJouleHeating
-T		 UseAuroralHeating
-T		 UseNOCooling
-T		 UseOCooling
+F		 UseJouleHeating
+F		 UseAuroralHeating
+F		 UseNOCooling
+F		 UseOCooling
 T		 UseConduction
 T		 UseTurbulentConduction
 T		 UseUpdatedTurbulentConduction
-20.0		 Eddy Conduction Scaling (>= 2.0 at Earth)
+10.0		 Eddy Conduction Scaling (>= 2.0 at Earth)
 
 #FORCING
 T		UsePressureGradient
-T		UseIonDrag
+F		UseIonDrag
 T		UseNeutralDrag
 T		UseViscosity
 T		UseCoriolis
@@ -131,22 +131,22 @@ T		UseVerticalViscosity
 T		UseStressHeating
 
 #VERTICALSOURCES
-F               UseNeutralFrictionInSolver
-F               UseBoquehoAndBlelly Eddy Velocities
+T               UseNeutralFrictionInSolver
+T               UseBoquehoAndBlelly Eddy Velocities
 T               UseEddyCorrection 
 10.0            Maximum Vertical Velocities
 
 #IONFORCING
-T               UseExB
-T               UseIonPressure
-T               UseGravity
-T               UseNeutralDrag
+F               UseExB
+F               UseIonPressure
+F               UseGravity
+F               UseNeutralDrag
 F		UseDynamo
 
 #CHEMISTRY
-T		UseIonChemistry
-T		UseIonAdvection
-T		UseNeutralChemistry
+F		UseIonChemistry
+F		UseIonAdvection
+F		UseNeutralChemistry
 
 #STRETCH
 65.0		! location of minimum grid spacing
