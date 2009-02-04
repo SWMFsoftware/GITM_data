@@ -57,7 +57,7 @@ F		if you want to run with msis and iri only (i.e. not GITM)
 1.0		dt for output to a log file
 
 #SAVEPLOTS
-3600.0		dt for writing restart files
+7200.0		dt for writing restart files
 1		how many output files do you want
 3DALL		output style
 3600.0		dt for output
@@ -116,7 +116,14 @@ T		 UseOCooling
 T		 UseConduction
 T		 UseTurbulentConduction
 T		 UseUpdatedTurbulentConduction
-1.0		 Eddy Scaling
+1.0		 EddyScalingFactor
+
+#WAVEDRAG
+T               UseStressHeating
+
+#EDDYVELOCITY
+F               UseBoquehoAndBlelly
+T               UseEddyCorrection
 
 #FORCING
 T		UsePressureGradient
@@ -125,24 +132,6 @@ T		UseNeutralDrag
 T		UseViscosity
 T		UseCoriolis
 T		UseGravity
-
-#WAVEDRAG
-T		UseEddyViscosity
-T		UseVerticalViscosity
-T		UseStressHeating
-
-#VERTICALSOURCES
-F               UseNeutralFrictionInSolver
-F               UseBoquehoAndBlelly Eddy Velocities
-T               UseEddyCorrection 
-10.0            Maximum Vertical Velocities
-
-#IONFORCING
-T               UseExB
-T               UseIonPressure
-T               UseGravity
-T               UseNeutralDrag
-F		UseDynamo
 
 #CHEMISTRY
 T		UseIonChemistry
