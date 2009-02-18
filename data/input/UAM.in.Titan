@@ -6,18 +6,18 @@
 F		usebarriers - forces the code to stop and wait more often
 
 #RESTART
-T
+F
 
 #GRID
 1		lons
 1		lats
-0.0		minimum latitude to model
-0.0		maximum latitude to model
+45.0		minimum latitude to model
+45.0		maximum latitude to model
 0.0		longitude to model (ignored in everything but 1D)
 
 #DIFFUSION
 T
-100.0		Eddy Diffusion Coefficient (Should be about 37.5 for 1-D runs)
+500.0		Eddy Diffusion Coefficient (Should be about 37.5 for 1-D runs)
 0.010		Total Eddy Diffusion applied at alts below this pressures level
 0.005		No Eddy Diffusion at altitudes above this pressure level
 
@@ -28,60 +28,68 @@ T
 86000.0		Maximum amount of cputime to use before stopping the code
 
 #TIMESTART
-2002		year
-12		month
-21		day
-12		hour
+2005		year
+01		month
+09		day
+00		hour
 00		minute
 00		second
 
 #TIMEEND
-2002		year
-12		month
-22		day
+2005		year
+10		month
+16		day
 00		hour
 00		minute
 00		second
 
 #CFL
-0.1		percentage of maximum allowable time-step to take
+0.10		percentage of maximum allowable time-step to take
 
 #LIMITER
-minmod		The MC limiter does not work well for Mars
+mc		The MC limiter does not work well for Mars
 
 #STATISTICALMODELSONLY
 F		if you want to run with msis and iri only (i.e. not GITM)
 1800.0		time step to take if you run with msis and iri
 
 #LOGFILE
-1.0		dt for output to a log file
+300.0		dt for output to a log file
 
 #SAVEPLOTS
-300.0		dt for writing restart files
+43200.0		dt for writing restart files
 1		how many output files do you want
-3DALL		output style
-300.0		dt for output
+1DALL		output style
+43200.0		dt for output
 
 #ELECTRODYNAMICS
 60.0		how often to update potential
 60.0		how often to update aurora and euv
 
 #ALTITUDE
-000.0		minimum altitude to use
-300.0		maximum altitude to use (ignored unless the following is F)
+500.0		minimum altitude to use
+1500.0		maximum altitude to use (ignored unless the following is F)
 F		use stretched grid
 
 #INITIAL
 T		initialize thermosphere using MSIS
 F		initialize ionosphere using IRI
-100.0		if msis is false, then this is the temperature at the base
-250.0		if msis is false, then this is the temperature at the top
-140.0		if msis is false, then this altitude of the temperature change
-20.0		if msis is false, then this width of the temperature change
-1.17e18		CO2
-4.03e15		CO
-2.31e15		O
-3.26e16		N2
+161.0		if msis is false, then this is the temperature at the base
+150.0		if msis is false, then this is the temperature at the top
+900.0		if msis is false, then this altitude of the temperature change
+50.0		if msis is false, then this width of the temperature change
+2.083e19		N2
+3.874e17		CH4
+9.166e14		O
+2.044e14		N2
+3.855e06		N2
+1.773e04		N2
+1.618e11		N2
+6.485e04		N2
+4.531e08		N2
+9.458e14		N2
+2.390e14		N2
+1.101e05		N2
 
 #APEX
 F		Use apex magnetic coordinate system
@@ -91,8 +99,8 @@ none		northern hemisphere amie file
 none		southern hemisphere amie file
 
 #F107
-150.0		f10.7
-150.0		f10.7 averaged over 81 days
+80.0		f10.7
+80.0		f10.7 averaged over 81 days
 
 #HPI
 1.0		hemispheric power
@@ -115,19 +123,7 @@ F		 UseOCooling
 T		 UseConduction
 F		 UseTurbulentConduction
 F		 UseUpdatedTurbulentConduction
-1.0		 EddyScalingFactor
-
-#VERTICALSOURCES
-F                UseEddyInSolver
-F                UseNeutralFrictionInSolver
-10.0
-
-#WAVEDRAG
-T               UseStressHeating
-
-#EDDYVELOCITY
-F               UseBoquehoAndBlelly
-F               UseEddyCorrection
+10.0		 Eddy Conduction Scaling (>= 2.0 at Earth)
 
 #FORCING
 T		UsePressureGradient
@@ -137,17 +133,24 @@ T		UseViscosity
 T		UseCoriolis
 T		UseGravity
 
+#WAVEDRAG
+T		UseStressHeating
+
+#EDDYVELOCITY
+F               UseBoquehoAndBlelly Eddy Velocities
+F               UseEddyCorrection 
+
 #IONFORCING
-T               UseExB
-T               UseIonPressure
-T               UseGravity
-T               UseNeutralDrag
+F               UseExB
+F               UseIonPressure
+F               UseGravity
+F               UseNeutralDrag
 F		UseDynamo
 
 #CHEMISTRY
-F		UseIonChemistry
+T		UseIonChemistry
 F		UseIonAdvection
-F		UseNeutralChemistry
+T		UseNeutralChemistry
 
 #STRETCH
 65.0		! location of minimum grid spacing
