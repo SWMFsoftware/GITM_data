@@ -38,7 +38,7 @@ T
 #TIMEEND
 2002		year
 12		month
-22		day
+21		day
 00		hour
 05		minute
 00		second
@@ -48,6 +48,7 @@ T
 
 #LIMITER
 mc		only limiter available
+2.0
 
 #STATISTICALMODELSONLY
 F		if you want to run with msis and iri only (i.e. not GITM)
@@ -80,6 +81,17 @@ T		initialize ionosphere using IRI
 7.0e18		if msis is false, then this is the N(species2) at the base
 3.0e19		if msis is false, then this is the N(species3) at the base
 
+#TIDES
+T
+F
+
+#GSWMCOMP
+F
+F
+F
+F
+
+
 #APEX
 T		Use apex magnetic coordinate system
 
@@ -104,7 +116,7 @@ fismflux.dat	Filename
 #SOLARWIND
 0.0		IMF Bx
 0.0		IMF By
--20.0		IMF Bz
+-2.0		IMF Bz
 400.0		Solar wind Vx
 
 #THERMO

@@ -48,6 +48,7 @@ T
 
 #LIMITER
 mc
+2.0
 
 #STATISTICALMODELSONLY
 F
@@ -81,6 +82,10 @@ T		IRI
 3.0e19
 1.0e16
 
+#TIDES
+T		UseMSISTides
+F		UseGSWMTides
+
 #APEX
 F
 
@@ -111,6 +116,16 @@ T		 UseAuroralHeating
 T		 UseNOCooling
 T		 UseOCooling
 T		 UseConduction
+T		 UseTurbulentConduction
+T		 UseUpdatedTurbulentConduction
+1.0		 EddyScalingFactor
+
+#WAVEDRAG
+T               UseStressHeating
+
+#EDDYVELOCITY
+F               UseBoquehoAndBlelly
+T               UseEddyCorrection
 
 #FORCING
 T		UsePressureGradient
