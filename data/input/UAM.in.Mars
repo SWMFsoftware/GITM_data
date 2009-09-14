@@ -6,7 +6,7 @@
 F		usebarriers - forces the code to stop and wait more often
 
 #RESTART
-T
+F
 
 #GRID
 1		lons
@@ -38,16 +38,17 @@ T
 #TIMEEND
 2002		year
 12		month
-22		day
-00		hour
+21		day
+13		hour
 00		minute
 00		second
 
 #CFL
-0.1		percentage of maximum allowable time-step to take
+0.6		percentage of maximum allowable time-step to take
 
 #LIMITER
-minmod		The MC limiter does not work well for Mars
+mc		The MC limiter does not work well for Mars
+2.0
 
 #STATISTICALMODELSONLY
 F		if you want to run with msis and iri only (i.e. not GITM)
@@ -119,8 +120,8 @@ F		 UseUpdatedTurbulentConduction
 
 #VERTICALSOURCES
 F                UseEddyInSolver
-F                UseNeutralFrictionInSolver
-10.0
+T                UseNeutralFrictionInSolver
+25.0
 
 #WAVEDRAG
 T               UseStressHeating
