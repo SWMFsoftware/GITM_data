@@ -83,6 +83,7 @@ T		IRI
 1.0e16
 
 #TIDES
+F
 T		UseMSISTides
 F		UseGSWMTides
 
