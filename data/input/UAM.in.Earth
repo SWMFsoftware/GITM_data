@@ -82,15 +82,15 @@ T		initialize ionosphere using IRI
 3.0e19		if msis is false, then this is the N(species3) at the base
 
 #TIDES
-T
-F
+F		UseMSISFlat
+T		UseMSISTides
+F		UseGSWMTides
 
 #GSWMCOMP
-F
-F
-F
-F
-
+F		Diurnal Migrating
+F		Diurnal NonMigrating
+F		Semidiurnal Migrating
+F		Semidiurnal NonMigrating
 
 #APEX
 T		Use apex magnetic coordinate system

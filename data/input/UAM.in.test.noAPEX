@@ -87,6 +87,12 @@ F
 T		UseMSISTides
 F		UseGSWMTides
 
+#GSWMCOMP
+F		Diurnal Migrating
+F		Diurnal NonMigrating
+F		Semidiurnal Migrating
+F		Semidiurnal NonMigrating
+
 #APEX
 F
 
