@@ -86,6 +86,7 @@ T		IRI
 F
 T		UseMSISTides
 F		UseGSWMTides
+F		UseWACCMTides
 
 #GSWMCOMP
 F		Diurnal Migrating

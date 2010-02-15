@@ -85,6 +85,7 @@ T		initialize ionosphere using IRI
 F		UseMSISFlat
 T		UseMSISTides
 F		UseGSWMTides
+F		UseWACCMTides
 
 #GSWMCOMP
 F		Diurnal Migrating

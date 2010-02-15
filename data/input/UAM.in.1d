@@ -110,6 +110,9 @@ T		 UseAuroralHeating
 T		 UseNOCooling
 T		 UseOCooling
 T		 UseConduction
+T		 UseTurbulentConduction
+T		 UseUpdatedTurbulentConduction
+1.0		 EddyScalingFactor
 
 #FORCING
 T		UsePressureGradient
