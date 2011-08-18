@@ -9,10 +9,10 @@ F		usebarriers - forces the code to stop and wait more often
 F
 
 #GRID
-1		lons
-1		lats
-0.0		minimum latitude to model
-0.0		maximum latitude to model
+8		lons
+4		lats
+-90.0		minimum latitude to model
+90.0		maximum latitude to model
 0.0		longitude to model (ignored in everything but 1D)
 
 #DIFFUSION
@@ -36,10 +36,10 @@ T
 00		second
 
 #TIMEEND
-2002		year
-12		month
-21		day
-13		hour
+2003		year
+01		month
+30		day
+12		hour
 00		minute
 00		second
 
@@ -58,10 +58,10 @@ F		if you want to run with msis and iri only (i.e. not GITM)
 1.0		dt for output to a log file
 
 #SAVEPLOTS
-300.0		dt for writing restart files
+3600.0		dt for writing restart files
 1		how many output files do you want
 3DALL		output style
-300.0		dt for output
+3600.0		dt for output
 
 #ELECTRODYNAMICS
 60.0		how often to update potential
@@ -76,6 +76,9 @@ F		use stretched grid
 F			If you want to include topography
 80.0			Altitude at which the vertical grid becomes consistent
 
+#DAMPING
+T			Turn on vertical velocity damping term in vertical_solver
+	
 #INITIAL
 T		initialize thermosphere using MSIS
 F		initialize ionosphere using IRI
@@ -125,13 +128,13 @@ F		 UseUpdatedTurbulentConduction
 #VERTICALSOURCES
 F                UseEddyInSolver
 F                UseNeutralFrictionInSolver
-25.0
+200.0
 
 #WAVEDRAG
 F               UseStressHeating
 
 #EDDYVELOCITY
-T               UseBoquehoAndBlelly
+F               UseBoquehoAndBlelly
 T               UseEddyCorrection
 
 #FORCING
@@ -151,7 +154,7 @@ F		UseDynamo
 
 #CHEMISTRY
 T		UseIonChemistry
-F		UseIonAdvection
+T		UseIonAdvection
 T		UseNeutralChemistry
 
 #STRETCH
