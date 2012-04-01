@@ -1,4 +1,19 @@
 
+To use this, the ModSize file should be:
+
+  integer, parameter :: nLons = 20
+  integer, parameter :: nLats = 20
+  integer, parameter :: nAlts = 60
+
+  integer, parameter :: nBlocksMax = 1
+
+  And it should be run on 4 processors.  If you don't have 4 PEs, use:
+
+  integer, parameter :: nLons = 40
+  integer, parameter :: nLats = 40
+
+  and change the GRID below to be lons=1 and lats=1
+
 #DEBUG
 0		debug level
 0		cpu to watch
