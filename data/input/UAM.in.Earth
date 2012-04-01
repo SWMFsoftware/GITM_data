@@ -48,7 +48,7 @@ T
 
 #LIMITER
 mc		only limiter available
-2.0
+1.6
 
 #STATISTICALMODELSONLY
 F		if you want to run with msis and iri only (i.e. not GITM)
@@ -61,7 +61,7 @@ F		if you want to run with msis and iri only (i.e. not GITM)
 7200.0		dt for writing restart files
 1		how many output files do you want
 3DALL		output style
-3600.0		dt for output
+300.0		dt for output
 
 #ELECTRODYNAMICS
 60.0		how often to update potential
@@ -96,29 +96,61 @@ F		Semidiurnal NonMigrating
 #APEX
 T		Use apex magnetic coordinate system
 
-#AMIEFILES
-none		northern hemisphere amie file
-none		southern hemisphere amie file
+------------------
+solar irradiance
 
 #F107
 150.0		f10.7
 150.0		f10.7 averaged over 81 days
 
+or
+
+NGDC_INDICES
+UA/DataIn/f107.txt
+
+or
+
 #EUV_DATA
 F		Use solar flux data
 fismflux.dat	Filename
 
+------------------
+Hemispheric Power
+
 #HPI
 1.0		hemispheric power
 
+or
+
+NOAAHPI_INDICES
+power file
+
 #KP
 1.0		kp
+
+----------------------
+IMF / potential
 
 #SOLARWIND
 0.0		IMF Bx
 0.0		IMF By
 -2.0		IMF Bz
 400.0		Solar wind Vx
+
+or
+
+SWPC_INDICES
+imf file
+solar wind file
+
+MHD_INDICES
+imf/solarwind file
+
+#AMIEFILES
+none		northern hemisphere amie file
+none		southern hemisphere amie file
+
+
 
 #THERMO
 T		 UseSolarHeating
@@ -145,6 +177,19 @@ T		UseNeutralDrag
 T		UseViscosity
 T		UseCoriolis
 T		UseGravity
+
+#IONFORCING
+T               UseExB
+T               UseIonPressureGradient
+T               UseIonGravity
+T               UseNeutralDrag
+F               UseDynamo
+
+#DYNAMO
+F
+70.0
+500.0
+1.0
 
 #CHEMISTRY
 T		UseIonChemistry
