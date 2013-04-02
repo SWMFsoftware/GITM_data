@@ -1,4 +1,4 @@
-
+	
 #DEBUG
 0		debug level
 0		cpu to watch
@@ -9,7 +9,7 @@ F		usebarriers - forces the code to stop and wait more often
 F
 
 #GRID
-2		lons
+6		lons
 2		lats
 -90.0		minimum latitude to model
 90.0		maximum latitude to model
