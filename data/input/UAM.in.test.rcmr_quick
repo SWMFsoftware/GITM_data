@@ -55,11 +55,11 @@ grace.dat
 60.0
 
 #RCMR
-T       Assimilate neutral density
-F       Assimilate VTEC
-100.0
-1
-1
+RHO     Assimilate neutral density
+F107    Drive F10.7
+100.0   Initial F10.7 estimate
+1       Number of assimilative inputs
+1       Satellite index number for first assimilative input
 
 #LIMITER
 mc		only limiter available
