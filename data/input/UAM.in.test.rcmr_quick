@@ -47,19 +47,19 @@ T
 #CFL
 0.75		percentage of maximum allowable time-step to take
 
-#SATELLITES
-2
-champ.dat
-60.0
-grace.dat
-60.0
-
 #RCMR
 RHO     Assimilate neutral density
 F107    Drive F10.7
 100.0   Initial F10.7 estimate
 1       Number of assimilative inputs
 1       Satellite index number for first assimilative input
+
+#SATELLITES
+2
+champ.dat
+60.0
+grace.dat
+60.0
 
 #LIMITER
 mc		only limiter available
