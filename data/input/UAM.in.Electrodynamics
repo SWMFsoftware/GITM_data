@@ -17,12 +17,20 @@ F
 
 #DIFFUSION
 T
-100.0		Eddy Diffusion Coefficient (Should be about 37.5 for 1-D runs)
-0.010		Total Eddy Diffusion applied at alts below this pressures level
-0.005		No Eddy Diffusion at altitudes above this pressure level
+1000.0		Eddy Diffusion Coefficient (Should be less for 1-D runs)
+0.0010		Total Eddy Diffusion applied at alts below this pressures level
+0.0001		No Eddy Diffusion at altitudes above this pressure level
 
-#THERMALDIFFUSION
-5.6e-4		Thermal conductivity (code use kappa = number * T**0.75)
+#PHOTOELECTRON
+0.00       Efficiency of photoelectron heating
+
+#NEUTRALHEATING
+0.05       Efficiency of photoelectron heating
+
+#THERMALCONDUCTION
+3.6e-4     Thermal conductivity (o2)
+5.6e-4     Thermal conductivity (o)
+0.69       Thermal conductivity (^s)
 
 #CPUTIMEMAX
 1860000.0		Maximum amount of cputime to use before stopping 
@@ -121,9 +129,12 @@ fismflux.dat	Filename
 -2.0		IMF Bz
 400.0		Solar wind Vx
 
+#USEIMPROVEDIONADVECTION
+T
+
 #DYNAMO
 T               
-70.0            Latitude to start dynamo
+45.0            Latitude to start dynamo
 500             iterations to use for the solve
 1.0             minimum residual for the solver
 
@@ -135,7 +146,7 @@ T		 UseNOCooling
 T		 UseOCooling
 T		 UseConduction
 T		 UseTurbulentConduction
-T		 UseUpdatedTurbulentConduction
+F		 UseUpdatedTurbulentConduction
 1.0		 EddyScalingFactor
 
 #IONFORCING

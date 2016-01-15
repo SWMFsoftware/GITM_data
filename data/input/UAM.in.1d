@@ -18,12 +18,20 @@ F
 
 #DIFFUSION
 T
-1750.0		Eddy Diffusion Coefficient
-0.00010		Total Eddy Diffusion applied at alts below this pressures level
-0.00000		No Eddy Diffusion at altitudes above this pressure level
+1000.0		Eddy Diffusion Coefficient (Should be less for 1-D runs)
+0.0010		Total Eddy Diffusion applied at alts below this pressures level
+0.0001		No Eddy Diffusion at altitudes above this pressure level
 
-#THERMALDIFFUSION
-5.6e-4		Thermal conductivity (code use kappa = number * T**0.75)
+#PHOTOELECTRON
+0.00       Efficiency of photoelectron heating
+
+#NEUTRALHEATING
+0.05       Efficiency of photoelectron heating
+
+#THERMALCONDUCTION
+3.6e-4     Thermal conductivity (o2)
+5.6e-4     Thermal conductivity (o)
+0.69       Thermal conductivity (^s)
 
 #CPUTIMEMAX
 86000.0
@@ -105,6 +113,9 @@ none
 2.0
 400.0
 
+#USEIMPROVEDIONADVECTION
+T
+
 #THERMO
 T		 UseSolarHeating
 T		 UseJouleHeating
@@ -113,7 +124,7 @@ T		 UseNOCooling
 T		 UseOCooling
 T		 UseConduction
 T		 UseTurbulentConduction
-T		 UseUpdatedTurbulentConduction
+F		 UseUpdatedTurbulentConduction
 1.0		 EddyScalingFactor
 
 #FORCING
