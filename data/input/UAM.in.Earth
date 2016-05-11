@@ -18,7 +18,7 @@ F
 
 #DIFFUSION
 T
-1000.0		Eddy Diffusion Coefficient (Should be about 37.5 for 1-D runs)
+750.0		Eddy Diffusion Coefficient (Should be about 37.5 for 1-D runs)
 0.0010		Total Eddy Diffusion applied at alts below this pressures level
 0.0001		No Eddy Diffusion at altitudes above this pressure level
 
@@ -53,7 +53,7 @@ T
 00		second
 
 #CFL
-0.75		percentage of maximum allowable time-step to take
+0.65		percentage of maximum allowable time-step to take
 
 #LIMITER
 mc		only limiter available
@@ -171,13 +171,6 @@ T		 UseConduction
 T		 UseTurbulentConduction
 F		 UseUpdatedTurbulentConduction
 1.0		 EddyScalingFactor
-
-#WAVEDRAG
-T               UseStressHeating
-
-#EDDYVELOCITY
-F               UseBoquehoAndBlelly
-T               UseEddyCorrection
 
 #FORCING
 T		UsePressureGradient
