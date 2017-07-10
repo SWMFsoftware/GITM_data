@@ -9,10 +9,10 @@ F		usebarriers - forces the code to stop and wait more often
 F
 
 #GRID
-1		lons
-1		lats
-0.0		minimum latitude to model
-0.0		maximum latitude to model
+2		lons
+2		lats
+-90.0		minimum latitude to model
+90.0		maximum latitude to model
 0.0		longitude start to model (set to 0.0 for whole Earth)
 0.0             longitude end to model (set to 0.0 for whole Earth)
 
