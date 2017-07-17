@@ -1,5 +1,7 @@
 #!/bin/sh
 
+MPI=/usr/local/bin/mpirun
+
 # ----------------------------------------------------
 # 1D tests
 # ----------------------------------------------------
@@ -13,10 +15,10 @@ make rundir
 mv run run_1d
 cp srcData/UAM.in.1d run_1d/UAM.in
 cd run_1d
-./GITM.exe
+$MPI -np 1 ./GITM.exe
 ../share/Scripts/DiffNum.pl -b -r=1e-5 UA/data/log0000000?.dat UA/DataIn/log0000000?.1d.dat >& ../test_1d.diff
 diff UA/data/run_information.txt UA/DataIn/run_information.txt >> ../test_1d.diff
-cd UA ; pGITM ; cd ..
+cd UA ; $MPI -np 1 ./pGITM ; cd ..
 cd ..
 ls -l test_1d.diff
 
@@ -25,10 +27,10 @@ make rundir
 mv run run_eclipse
 cp srcData/UAM.in.eclipse run_eclipse/UAM.in
 cd run_eclipse
-./GITM.exe
+$MPI -np 1 ./GITM.exe
 ../share/Scripts/DiffNum.pl -b -r=1e-5 UA/data/log0000000?.dat UA/DataIn/log0000000?.eclipse.dat >& ../test_eclipse.diff
 diff UA/data/run_information.txt UA/DataIn/run_information.txt >> ../test_eclipse.diff
-cd UA ; pGITM ; cd ..
+cd UA ; $MPI -np 1 pGITM ; cd ..
 cd ..
 ls -l test_eclipse.diff
 
@@ -44,10 +46,10 @@ make rundir
 mv run run_3d
 cp srcData/UAM.in.3d run_3d/UAM.in
 cd run_3d
-mpirun -np 4 ./GITM.exe
+$MPI -np 4 ./GITM.exe
 ../share/Scripts/DiffNum.pl -b -r=1e-5 UA/data/log0000000?.dat UA/DataIn/log0000000?.3d.dat >& ../test_3d.diff
 diff UA/data/run_information.txt UA/DataIn/run_information.3d.txt >> ../test_3d.diff
-cd UA ; pGITM ; cd ..
+cd UA ; $MPI pGITM ; cd ..
 cd UA/data ; idl < ../DataIn/idl_input.3d ; cd ../..
 cd ..
 ls -l test_3d.diff
