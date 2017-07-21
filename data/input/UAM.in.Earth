@@ -18,9 +18,9 @@ F
 
 #DIFFUSION
 T
-100.0		Eddy Diffusion Coefficient (Should be about 37.5 for 1-D runs)
-0.0010		Total Eddy Diffusion applied at alts below this pressures level
-0.0001		No Eddy Diffusion at altitudes above this pressure level
+300.0		Eddy Diffusion Coefficient (Should be about 37.5 for 1-D runs)
+0.0050		Total Eddy Diffusion applied at alts below this pressures level
+0.0005		No Eddy Diffusion at altitudes above this pressure level
 
 #PHOTOELECTRON
 0.00       Efficiency of photoelectron heating
@@ -29,8 +29,8 @@ T
 0.05       Efficiency of photoelectron heating
 
 #THERMALCONDUCTION
-3.6e-4     Thermal conductivity (o2)
-5.6e-4     Thermal conductivity (o)
+3.8e-4     Thermal conductivity (o2)
+5.8e-4     Thermal conductivity (o)
 0.69       Thermal conductivity (^s)
 
 #CPUTIMEMAX
@@ -52,8 +52,11 @@ T
 00		minute
 00		second
 
+#AUSMSOLVER
+T       	Use AUSM+-up Solvers
+
 #CFL
-0.85		percentage of maximum allowable time-step to take
+0.80		percentage of maximum allowable time-step to take
 
 #LIMITER
 mc		only limiter available
@@ -183,11 +186,11 @@ T               UseExB
 T               UseIonPressureGradient
 T               UseIonGravity
 T               UseNeutralDrag
-T               UseDynamo
 
 #USEIMPROVEDIONADVECTION
 T   		UseImprovedIonAdvection
-F               UseNighttimeIonBCs
+T               UseNighttimeIonBCs
+2.0
 
 #DYNAMO
 T
@@ -208,10 +211,5 @@ T		UseNeutralChemistry
 #GLOW
 F		Whether to couple to GLOW
 3600.0		How often to run glow
-
-
-#AUSMSOLVER
-T       	Use AUSM+-up Solvers
-
 
 #END
