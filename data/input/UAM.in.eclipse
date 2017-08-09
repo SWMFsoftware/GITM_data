@@ -1,4 +1,13 @@
 
+To use this, the ModSize file should be:
+
+  integer, parameter :: nLons = 1
+  integer, parameter :: nLats = 1
+  integer, parameter :: nAlts = 50
+
+  integer, parameter :: nBlocksMax = 1
+
+
 #DEBUG
 0		debug level
 0		cpu to watch
@@ -16,9 +25,6 @@ F		usebarriers - forces the code to stop and wait more often
       3000.00
     0.0700000
       400.000
-
-#AUSMSOLVER
-T
 
 #RESTART
 F
@@ -41,12 +47,12 @@ T
 0.00       Efficiency of photoelectron heating
 
 #NEUTRALHEATING
-0.05       Efficiency of photoelectron heating
+0.02       Efficiency of photoelectron heating
 
 #THERMALCONDUCTION
-3.8e-4     Thermal conductivity (o2)
-5.8e-4     Thermal conductivity (o)
-0.69       Thermal conductivity (^s)
+5.6e-4     Thermal conductivity (o2)
+7.6e-4     Thermal conductivity (o)
+0.72       Thermal conductivity (^s)
 
 #CPUTIMEMAX
 86000.0		Maximum amount of cputime to use before stopping the code
@@ -67,11 +73,19 @@ T
 00		minute
 00		second
 
+#AUSMSOLVER
+T
+
 #CFL
 0.80		percentage of maximum allowable time-step to take
 
 #LIMITER
 mc		only limiter available
+2.0
+
+#USEIMPROVEDIONADVECTION
+T
+T
 2.0
 
 #STATISTICALMODELSONLY
@@ -111,22 +125,12 @@ T		UseMSISTides
 F		UseGSWMTides
 F		UseWACCMTides
 
-#GSWMCOMP
-F		Diurnal Migrating
-F		Diurnal NonMigrating
-F		Semidiurnal Migrating
-F		Semidiurnal NonMigrating
-
 #APEX
 T		Use apex magnetic coordinate system
 
 #F107
 80.0		f10.7
 80.0		f10.7 averaged over 81 days
-
-#EUV_DATA
-F		Use solar flux data
-fismflux.dat	Filename
 
 #HPI
 1.0		hemispheric power
@@ -140,49 +144,7 @@ fismflux.dat	Filename
 -2.0		IMF Bz
 400.0		Solar wind Vx
 
-#AMIEFILES
-none		northern hemisphere amie file
-none		southern hemisphere amie file
-
-#THERMO
-T		 UseSolarHeating
-T		 UseJouleHeating
-T		 UseAuroralHeating
-T		 UseNOCooling
-T		 UseOCooling
-T		 UseConduction
-T		 UseTurbulentConduction
-F		 UseUpdatedTurbulentConduction
-1.0		 EddyScalingFactor
-
-#FORCING
-T		UsePressureGradient
-T		UseIonDrag
-T		UseNeutralDrag
-T		UseViscosity
-T		UseCoriolis
-T		UseGravity
-
-#IONFORCING
-T               UseExB
-T               UseIonPressureGradient
-T               UseIonGravity
-T               UseNeutralDrag
-
-#USEIMPROVEDIONADVECTION
-T
-T
-2.0
-
 #DYNAMO
 F
-45.0
-500
-1.0
-
-#CHEMISTRY
-T		UseIonChemistry
-T		UseIonAdvection
-T		UseNeutralChemistry
 
 #END

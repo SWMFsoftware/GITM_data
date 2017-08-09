@@ -10,6 +10,8 @@ MPI=/usr/local/bin/mpirun
 make
 rm -rf run test_*.diff
 
+# Plain 1D
+
 rm -rf run_1d
 make rundir
 mv run run_1d
@@ -19,8 +21,11 @@ $MPI -np 1 ./GITM.exe
 ../share/Scripts/DiffNum.pl -b -r=1e-5 UA/data/log0000000?.dat UA/DataIn/log0000000?.1d.dat >& ../test_1d.diff
 diff UA/data/run_information.txt UA/DataIn/run_information.txt >> ../test_1d.diff
 cd UA ; $MPI -np 1 ./pGITM ; cd ..
+cd UA/data ; idl < ../DataIn/idl_input.1d ; cd ../..
 cd ..
 ls -l test_1d.diff
+
+# Eclipse
 
 rm -rf run_eclipse
 make rundir
@@ -31,6 +36,7 @@ $MPI -np 1 ./GITM.exe
 ../share/Scripts/DiffNum.pl -b -r=1e-5 UA/data/log0000000?.dat UA/DataIn/log0000000?.eclipse.dat >& ../test_eclipse.diff
 diff UA/data/run_information.txt UA/DataIn/run_information.txt >> ../test_eclipse.diff
 cd UA ; $MPI -np 1 pGITM ; cd ..
+cd UA/data ; idl < ../DataIn/idl_input.1d ; cd ../..
 cd ..
 ls -l test_eclipse.diff
 
