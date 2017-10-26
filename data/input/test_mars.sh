@@ -6,9 +6,8 @@ MPI=/usr/local/bin/mpirun
 # 1D tests
 # ----------------------------------------------------
 
-./Config.pl -Mars -g=1,1,120,4
+./Config.pl -mars -g=1,1,120,4
 make
-rm -rf run test_*.diff
 
 # Plain 1D
 
@@ -30,7 +29,7 @@ cd ..
 # 3D tests
 # ----------------------------------------------------
 
-./Config.pl -Mars -g=8,4,120,4
+./Config.pl -mars -g=8,4,120,4
 make
 
 rm -rf run_3d_mars
